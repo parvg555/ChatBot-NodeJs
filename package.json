@@ -1,0 +1,24 @@
+{
+  "name": "chatbot-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parvg555/ChatBot-NodeJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parvg555/ChatBot-NodeJs/issues"
+  },
+  "homepage": "https://github.com/parvg555/ChatBot-NodeJs#readme",
+  "dependencies": {
+    "@google-cloud/dialogflow": "^4.1.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.9"
+  }
+}
