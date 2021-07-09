@@ -1,7 +1,6 @@
 var $messages = $('.messages-content');
 var serverResponse = "wala";
 
-
 var suggession;
 //speech reco
 try {
@@ -33,20 +32,11 @@ document.getElementById("MSG").value= no.innerHTML;
 }
 
 $(window).load(function() {
-  $messages.mCustomScrollbar();
   setTimeout(function() {
     serverMessage("hello i am customer support bot type hi and i will show you quick buttions");
   }, 100);
 
 });
-
-function updateScrollbar() {
-  $messages.mCustomScrollbar("update").mCustomScrollbar('scrollTo', 'bottom', {
-    scrollInertia: 10,
-    timeout: 0
-  });
-}
-
 
 
 function insertMessage() {
@@ -54,11 +44,11 @@ function insertMessage() {
   if ($.trim(msg) == '') {
     return false;
   }
-  $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
-  fetchmsg() 
+  $('<span class="chat_msg_item chat_msg_item_user">' + msg + '</span>').appendTo($('.messages-content')).addClass('new');
+  fetchmsg();
   
   $('.message-input').val(null);
-  updateScrollbar();
+  //updateScrollbar();
 
 }
 
@@ -77,15 +67,14 @@ function serverMessage(response2) {
   if ($('.message-input').val() != '') {
     return false;
   }
-  $('<div class="message loading new"><figure class="avatar"><img src="css/bot.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
-  updateScrollbar();
+  
+  //updateScrollbar();
   
 
   setTimeout(function() {
-    $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="css/bot.png" /></figure>' + response2 + '</div>').appendTo($('.mCSB_container')).addClass('new');
-    updateScrollbar();
-  }, 100 + (Math.random() * 20) * 100);
+    $('<span class="chat_msg_item chat_msg_item_admin"><div class="chat_avatar"><img src="img/bot.png"/></div>' + response2 + '</span>').appendTo($('.messages-content')).addClass('new');
+    //updateScrollbar();
+  }, 100);
 
 }
 

@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" >
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-  <title>ML chatbot</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/style.css">
-
+  <body>
+    <div class="fabs">
+    <div class="chat">
+      <div class="chat_header">
+        <div class="chat_option">
+        <div class="header_img">
+          <img src="img/bot.png"/>
+          </div>
+          <span id="chat_head">Smart Bot</span> <br> <span class="agent"></span> <span class="online">(Online)</span>
   
-</head>
-
-<body>
-
-
-
-<div class="chat">
-  <div class="chat-title">
-    <h1>Smart BOt</h1>
-    <h2>i am customer support chat bot</h2>
-    <figure class="avatar">
-      <img src="css/bot.png"/></figure>
-  </div>
-  <div class="messages">
-    <div class="messages-content"></div>
-    <div class="suggession">
-     
+        </div>
+  
+      </div>
+      <div class="messages">
+      <div id="chat_converse" class="chat_conversion chat_converse messages-content">  
+      </div>
     </div>
+      <div class="fab_field">
+        <form class="message-box" id="mymsg" method="POST">
+        <a id="fab_camera" class="fab"><i class="fas fa-microphone" id="start-record-btn"></i></a>
+
+        <button id="fab_send" class="fab message-submit" type="submit"><i class="zmdi zmdi-mail-send"></i></button>
+        <textarea id="chatSend" name="MSG" placeholder="Send a message" class="chat_field chat_message message-input"></textarea>
+        </form>
+      </div>
+    </div>
+      <a id="prime" class="fab"><i class="prime zmdi zmdi-comment-outline"></i></a>
   </div>
-  <form class="message-box" id="mymsg" method="POST">
-    <input type="text" id="MSG" name="MSG" class="message-input" placeholder="Type message..." >
-   
-    <i class="fas fa-microphone" id="start-record-btn"></i>
-    <button type="submit" class="message-submit">Send</button>
-  </form>
-  <h3 class="no-browser-support" hidden>Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
-</div>
-<div class="bg"></div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
-  <script  src="js/index.js"></script>
+    <script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
   
-    
-</body>
+      <script src="js/index.js"></script>
+      <script src="js/chatbot.js"></script>
+  
+  </body>
+  
 
 </html>
